@@ -86,11 +86,11 @@ int main()
 	int* qarr = new int[q];
 	
 	// Receive array input
-	for (int i = 0; i < p; i++)
+	for (int i = 0; i < p; ++i)
 	{
 		std::cin >> parr[i];
 	}
-	for (int i = 0; i < q; i++)
+	for (int i = 0; i < q; ++i)
 	{
 		std::cin >> qarr[i];
 	}
@@ -128,11 +128,11 @@ int main()
 		// Step the point with a smaller x
 		if (x1 < x2)
 		{
-			pi++;
+			++pi;
 		}
 		else
 		{
-			qi++;
+			++qi;
 		}
 	}
 	

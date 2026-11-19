@@ -68,7 +68,7 @@ int main()
 	while(getline(input, line))
 	{
 		lines.push_back(line);
-		i++;
+		++i;
 		if (i == 1000) // Maximum 1000 lines
 		{
 			break;
@@ -85,7 +85,7 @@ int main()
 	std::string out;
 	
 	// Loop for every set of coordinates
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < count; ++i)
 	{
 		std::string coords = lines[i + 1];
 		// Take the coordinates apart
@@ -100,7 +100,7 @@ int main()
 		if (row < count + 2 || row > (int)lines.size())
 		{
 			//out.append("*", num); // Unfortunately, C++11 doesn't support this, but it is a faster way to fill with out with *
-			for (int j = 0; j < num; j++)
+			for (int j = 0; j < num; ++j)
 			{
 				out += '*';
 			}
@@ -115,7 +115,7 @@ int main()
 			if (col > cap) // Whether we are completely out of bounds or only partly
 			{
 				// Completely out of bounds
-				for (int j = 0; j < num; j++)
+				for (int j = 0; j < num; ++j)
 				{
 					out += '*';
 				}
@@ -125,7 +125,7 @@ int main()
 				// Part out of bounds
 				out.append(target.begin() + (col - 1), target.end()); // Basically substring but with append
 				int c = cap - target.size();
-				for (int j = 0; j < c; j++)
+				for (int j = 0; j < c; ++j)
 				{
 					out += '*';
 				}

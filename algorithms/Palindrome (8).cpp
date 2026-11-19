@@ -34,13 +34,13 @@ void formatStr(std::string& str)
 		if (c >= 'A' && c <= 'Z') // Make uppercase lowercase
 		{
 			c += 'a' - 'A';
-			i++;
+			++i;
 			continue; // Step i and skip validity check because it is already a valid character
 		}
 		if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')) // Validity check
 		{
 			// A valid character so step and continue
-			i++;
+			++i;
 		}
 		else
 		{
@@ -62,8 +62,8 @@ bool palindrome(const std::string str)
 		{
 			return false;
 		}
-		i++;
-		j--;
+		++i;
+		--j;
 	}
 	// No character mismatch: it is a palindrome
 	return true;

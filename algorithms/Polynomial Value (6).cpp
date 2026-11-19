@@ -61,7 +61,7 @@ double Eval_Polynomial(const double a[], int n, double x)
 	
 	// We can gradually step the x power value by multiplying it by itself every polynomial value
 	double x0 = 1.0;
-	for (int i = 0; i < n + 1; i++)
+	for (int i = 0; i < n + 1; ++i)
 	{
 		// Polynomial part
 		sum += a[i] * x0;

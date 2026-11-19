@@ -56,12 +56,12 @@ int count_valley(const int a[], int n)
 	int count = 0;
 	
 	// Don't test the first and last values
-	for (int i = 1; i < n - 1; i++)
+	for (int i = 1; i < n - 1; ++i)
 	{
 		// Literally the formula provided in the instructions
 		if (a[i - 1] > a[i] && a[i + 1] > a[i])
 		{
-			count++;
+			++count;
 		}
 	}
 	

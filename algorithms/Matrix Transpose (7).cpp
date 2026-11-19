@@ -86,10 +86,10 @@ int** transposeMatrix(int** arr, int m, int n)
 {
 	// Generate a new 2d array of flipped dimensions and at the same time input values
 	int** arr2 = new int*[n];
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; ++i)
 	{
 		arr2[i] = new int[m];
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < m; ++j)
 		{
 			// Mapping values over
 			arr2[i][j] = arr[j][i];
@@ -113,7 +113,7 @@ int main() {
 	
 	// ------------------------------ New Code ------------------------------
 	// Define the inner-arrays of the 2d array
-	for (int i = 0; i < M; i++)
+	for (int i = 0; i < M; ++i)
 	{
 		original[i] = new int[N];
 	}

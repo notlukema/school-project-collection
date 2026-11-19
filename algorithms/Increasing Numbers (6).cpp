@@ -59,7 +59,7 @@ int check_increasing(int a[], int n)
 	}
 	
 	// Loop with at least two inputs
-	for (int i = 1; i < n; i++)
+	for (int i = 1; i < n; ++i)
 	{
 		// Test if the current value is greater than the last
 		// (Means the sequence isn't increasing anymore)

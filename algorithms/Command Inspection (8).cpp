@@ -190,7 +190,7 @@ int main()
 	
 	// Create list of allowed instructions
 	bool allowed[total_ins_count] = { false };
-	for (int i = 0; i < instructions; i++)
+	for (int i = 0; i < instructions; ++i)
 	{
 		// Skip if line is empty (shouldn't be possible)
 		if (l2.empty())
@@ -221,7 +221,7 @@ int main()
 	int ins_count = std::stoi(l3);
 	
 	// Loop instructions
-	for (int i = 0; i < ins_count; i++)
+	for (int i = 0; i < ins_count; ++i)
 	{
 		// Grab line starting from the 4th line
 		std::string l = lines[i + 3];

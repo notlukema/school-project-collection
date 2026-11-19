@@ -52,7 +52,7 @@ int main()
 	char names[4] = { 'A', 'B', 'C', 'D' };
 	
 	// Here, i stands for the student that sent the gift
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4; ++i)
 	{
 		// We test each statement
 		bool st_a = i != 0; // A didn't send the gift

@@ -30,7 +30,7 @@ int main()
 	// A Tower of Hanoi of n rings can be solved in 2^n - 1 moves
 	
 	unsigned long long moves = 1; // Able to hold a massive number (up to 2^64 - 1)
-	for (int i = 0; i < n; i++) // Calculate 2^n without std math
+	for (int i = 0; i < n; ++i) // Calculate 2^n without std math
 	{
 		moves *= 2;
 	}

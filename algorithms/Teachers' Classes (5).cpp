@@ -132,24 +132,24 @@ int main()
 		
 		// Time to print (this one's a little complicated compared to the other logic algorithms)
 		int i = 0;
-		while (courses[i] != 1) { i++; } // Loop to first teacher A course
+		while (courses[i] != 1) { ++i; } // Loop to first teacher A course
 		std::cout << names[i] << " ";
-        i++;
-		while (courses[i] != 1) { i++; } // Loop to second teacher A course
+        ++i;
+		while (courses[i] != 1) { ++i; } // Loop to second teacher A course
 		std::cout << names[i] << "\n";
 		
 		i = 0;
-		while (courses[i] != 2) { i++; } // Loop to first teacher B course
+		while (courses[i] != 2) { ++i; } // Loop to first teacher B course
 		std::cout << names[i] << " ";
-        i++;
-		while (courses[i] != 2) { i++; } // Loop to second teacher B course
+        ++i;
+		while (courses[i] != 2) { ++i; } // Loop to second teacher B course
 		std::cout << names[i] << "\n";
 		
 		i = 0;
-		while (courses[i] != 3) { i++; } // Loop to first teacher C course
+		while (courses[i] != 3) { ++i; } // Loop to first teacher C course
 		std::cout << names[i] << " ";
-        i++;
-		while (courses[i] != 3) { i++; } // Loop to second teacher C course
+        ++i;
+		while (courses[i] != 3) { ++i; } // Loop to second teacher C course
 		std::cout << names[i];
 		
 		// Exit program

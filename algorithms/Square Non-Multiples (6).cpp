@@ -45,7 +45,7 @@ int main()
 	
 	int sqr;
 	// Repeat until the square is bigger than n
-	for (int i = 2; (sqr = i * i) <= n; i++)
+	for (int i = 2; (sqr = i * i) <= n; ++i)
 	{
 		// If already marked, it means any multiple of it will also already be marked, so skip
 		if (mark[i - 1])
@@ -61,11 +61,11 @@ int main()
 	
 	// Count all not marked
 	int count = 0;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; ++i)
 	{
 		if (!mark[i])
 		{
-			count++;
+			++count;
 		}
 	}
 	
@@ -135,7 +135,7 @@ int main()
 		mcount += add;
 		//std::cout << (num) << ", " << add << ": ";
 		//std::cout << num << ", ";
-		for (int j = 0; j < i; j++)
+		for (int j = 0; j < i; ++j)
 		{
 			int sub = add / prime_squares[j];
 			if (sub == 0)
@@ -146,7 +146,7 @@ int main()
 			//std::cout << sub << ", ";
 		}
 		//std::cout << (mcount - mlast) << "\n";
-		i++;
+		++i;
 	}
 	
 	std::cout << n - mcount;

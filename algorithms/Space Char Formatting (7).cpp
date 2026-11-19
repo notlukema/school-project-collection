@@ -68,7 +68,7 @@ char* format_line(const char* str)
 			// Skip repeating spaces
 			if (last_char_was_space)
 			{
-				i++; // Don't forget we have to manually step i here
+				++i; // Don't forget we have to manually step i here
 				continue;
 			}
 			
@@ -76,7 +76,7 @@ char* format_line(const char* str)
 			
 			// Input space into new string
 			str2[j] = ' ';
-			j++;
+			++j;
 		}
 		else
 		{
@@ -102,10 +102,10 @@ char* format_line(const char* str)
 			
 			// Input character into new string
 			str2[j] = c;
-			j++;
+			++j;
 		}
 		
-		i++;
+		++i;
 	}
 	
 	// Finally, add the null terminator to the new string

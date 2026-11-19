@@ -78,7 +78,7 @@ int* map(int (*op)(int), int* arr, int size)
 	// Define dynamic array for storing new values and returning
 	int* arr2 = new int[size];
 	
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; ++i)
 	{
 		// Repeat function "op" on every array value
 		arr2[i] = op(arr[i]);

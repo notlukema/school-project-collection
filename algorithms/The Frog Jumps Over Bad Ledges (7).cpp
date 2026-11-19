@@ -38,7 +38,7 @@ int fibonacci(int n)
 	while (fib_i <= n)
 	{
 		fib_seq[fib_i] = fib_seq[fib_i - 1] + fib_seq[fib_i - 2];
-		fib_i++;
+		++fib_i;
 	}
 	return fib_seq[n];
 }
@@ -53,7 +53,7 @@ int main()
 	bool* steps = new bool[n] {false};
 	
 	// Recieve bad steps
-	for (int i = 0; i < m; i++)
+	for (int i = 0; i < m; ++i)
 	{
 		int step;
 		std::cin >> step;
@@ -78,7 +78,7 @@ int main()
 	// (unsigned is an option too)
 	
 	int consecutive_steps = 0;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; ++i)
 	{
 		// We assume that the first and last steps cannot be bad steps so we can ignore those cases
 		// We also assume bad steps cannot come in doubles (it would make reaching the top impossible)
@@ -86,7 +86,7 @@ int main()
 		{
 			combos *= fibonacci(consecutive_steps);
 			consecutive_steps = 0;
-			i++; // Skip the next step because the frog starts on it so it doesn't need to be counted
+			++i; // Skip the next step because the frog starts on it so it doesn't need to be counted
 		}
 		else
 		{

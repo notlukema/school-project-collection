@@ -43,7 +43,7 @@ int main()
 	if (n <= 45)
 	{
 		// Loop through all possible first digits
-		for (int i1 = 1; i1 < 10; i1++)
+		for (int i1 = 1; i1 < 10; ++i1)
 		{
 			// Remainder after first digit
 			int n2 = n - i1 * 2;
@@ -61,7 +61,7 @@ int main()
 			}
 			
 			// Loop through all possible second digits
-			for (int i2 = 0; i2 < 10; i2++)
+			for (int i2 = 0; i2 < 10; ++i2)
 			{
 				// Remainder after second digit
 				int n3 = n2 - i2 * 2;
@@ -95,7 +95,7 @@ int main()
 		
 		// Start from the lowest possible first number since the two numbers after can only add to a maximum of 18
 		// Also bring in a ceiling to prevent negative target values
-		for (int i1 = std::max(1, n2 - 18); i1 < std::min(10, n2 + 1); i1++)
+		for (int i1 = std::max(1, n2 - 18); i1 < std::min(10, n2 + 1); ++i1)
 		{
 			// The number that needs to be reached with two digits
 			int n3 = n2 - i1;
@@ -110,8 +110,8 @@ int main()
 			{
 				// Print
 				std::cout << i1 << i2 << i3 << i3 << i2 << i1 << "\n";
-				i2++;
-				i3--;
+				++i2;
+				--i3;
 			}
 		}
 	}

@@ -73,14 +73,9 @@ uint32_t biClrImportant; // 重要颜色数
 #include <fstream>
 #include <cstdint> // uint64_t is equivalent to unsigned long long
 
-// Hmmm the given code isn't mandatory plus it's format isn't the best for this case
+// Hmmm I'm inspired to make a bit reader so I'll be ignoring the given code
 
 using byte_t = uint8_t; // Rename for convenience
-
-// We could create a struct to hold header and info data but there isn't much usage for that here
-
-// However, I do like code that can do more than required
-// So here is a complete file bit reading system
 
 struct bit_pointer // Compress two numbers into one
 {

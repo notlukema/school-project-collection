@@ -68,21 +68,21 @@ void count_chars(const char a[], int *p_letter, int *p_digit, int *p_other)
 	
 	// Get length of string and loop
 	int len = strlen(a);
-	for (int i = 0; i < len; i++)
+	for (int i = 0; i < len; ++i)
 	{
 		// Could use a switch statement
 		const char c = a[i];
 		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) // Is a letter
 		{
-			(*p_letter)++;
+			++(*p_letter);
 		}
 		else if (c >= '0' && c <= '9') // Is a number
 		{
-			(*p_digit)++;
+			++(*p_digit);
 		}
 		else // Other
 		{
-			(*p_other)++;
+			++(*p_other);
 		}
 	}
 	// ----------------------------------------------------------------------
@@ -93,7 +93,7 @@ void process_chars(char a[])
 	// ------------------------------ New Code ------------------------------
 	// Get length of string and loop
 	int len = strlen(a);
-	for (int i = 0; i < len; i++)
+	for (int i = 0; i < len; ++i)
 	{
 		// Get character reference
 		char& c = a[i];
