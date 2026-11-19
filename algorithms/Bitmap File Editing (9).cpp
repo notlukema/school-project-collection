@@ -226,6 +226,9 @@ int main()
 		}
 	}
 	
+	// Close input
+	input.close();
+	
 	// Output data
 	
 	// Define the condition for blacking out a pixel
@@ -317,6 +320,9 @@ int main()
 			}
 		}
 	}
+	
+	// Close output
+	output.close();
 	
 	// Clean data
 	delete[] pixels;
