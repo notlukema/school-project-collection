@@ -93,7 +93,9 @@ uint32_t biClrImportant; // 重要颜色数
 
 #include <iostream>
 #include <fstream>
-#include <cstdint>  // int32_t, uint32_t, uint16_t
+#include <cstdint> // int32_t, uint32_t, uint16_t
+#include <cstdlib> // std::abs
+#include <algorithm> // std::min
 
 // This time, we will use the given code
 
